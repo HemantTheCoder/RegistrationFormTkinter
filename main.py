@@ -8,11 +8,11 @@ root.title('Registration form')
 #Creating Sub-Title
 rf=Label(root,text="Registration form", bg='black',fg='white', width=20, font=("bold",20))
 rf.place(x=90,y=60)
-
+#Defining Exit-Window
 def exitwindow():
     root.destroy()
 
-
+#Defining Submit
 def submit():
     screen=Frame()
     screen.place(x=0, y=0, width=500, height=530)
@@ -85,7 +85,7 @@ def Clearall():
     entry_for_Password.delete(0, END)
     entry_for_Confirm_Password.delete(0, END)
 
-
+#Defining Button-Change
 def buttonchange():
      if(entry_for_Password['text']=="unhide"):
         entry_for_Password.configure(text="hide")
@@ -94,7 +94,7 @@ def buttonchange():
 
 #Creating Button For Clear All
 button_for_clearall=Button(root, text='Clear All' , width=14,bg="black",fg='white', command=Clearall).place(x=213,y=450)   
-
+#Defining Hide
 def hide():
      if(entry_for_Password['show']== "*"):
          entry_for_Password.configure(show="")
@@ -105,5 +105,5 @@ def hide():
 button_for_hide=Button(root, text='Show/Hide Password' , width=14,bg="black",fg='white', command=lambda:[hide(), buttonchange()]).place(x=213,y=480)   
 
 
-
+#Running The Infinite Loop
 root.mainloop()
