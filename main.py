@@ -73,7 +73,7 @@ entry_for_Confirm_Password=Entry(root, width=23, bg="white")
 entry_for_Confirm_Password.place(x=240,y=382)
 
 #Creating Button For Submit
-Button(root, text='Submit', width=13,bg="black",fg='white', command=submit).place(x=213,y=420)
+Button(root, text='Submit', width=14,bg="black",fg='white', command=submit).place(x=213,y=420)
 
 
 #Clear All
@@ -86,22 +86,24 @@ def Clearall():
     entry_for_Confirm_Password.delete(0, END)
 
 
-
-
-
-
+def buttonchange():
+     if(entry_for_Password["text"]=="unhide"):
+        entry_for_Password.configure(text="hide")
+     else:
+        entry_for_Password.configure(text="unhide")
 
 #Creating Button For Clear All
-button_for_clearall=Button(root, text='Clear All' , width=13,bg="black",fg='white', command=Clearall).place(x=213,y=450)   
+button_for_clearall=Button(root, text='Clear All' , width=14,bg="black",fg='white', command=Clearall).place(x=213,y=450)   
 
 def hide():
-     if(entry_for_Password['show']== ""):
-         entry_for_Password.configure(show="*")
+     if(entry_for_Password['show']== "*"):
+         entry_for_Password.configure(show="")
      else:
-        entry_for_Password.configure(show="")
+        entry_for_Password.configure(show="*")
 
 #Creating Button For Clear All
-button_for_hide=Button(root, text='Show/Hide Password' , width=13,bg="black",fg='white', command=hide).place(x=213,y=480)   
+button_for_hide=Button(root, text='Show/Hide Password' , width=14,bg="black",fg='white', command=lambda:[hide(), buttonchange()]).place(x=213,y=480)   
+
 
 
 root.mainloop()
