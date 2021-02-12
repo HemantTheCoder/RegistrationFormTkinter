@@ -1,3 +1,3 @@
 # RegistrationFormTkinter
 # A Simple Registration Form Using Tkinter
-# Updated Regularly
+# Updated Almost Regularly
