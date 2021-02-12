@@ -66,7 +66,7 @@ entry_for_Password.place(x=240,y=332)
 
 
 #Creating Confirm Password
-Confirm=Label(root,text="Confirm Password",width=20,font=('bold',12))
+Confirm=Label(root,text="Confirm Password",width=18,font=('bold',12))
 Confirm.place(x=60,y=380)
 #Creating Entry For Confirm Password
 entry_for_Confirm_Password=Entry(root, width=23, bg="white")
@@ -87,7 +87,7 @@ def Clearall():
 
 
 def buttonchange():
-     if(entry_for_Password["text"]=="unhide"):
+     if(entry_for_Password['text']=="unhide"):
         entry_for_Password.configure(text="hide")
      else:
         entry_for_Password.configure(text="unhide")
