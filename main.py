@@ -104,11 +104,4 @@ def hide():
 button_for_hide=Button(root, text='Show/Hide Password' , width=13,bg="black",fg='white', command=hide).place(x=213,y=480)   
 
 
-
-    
-                                                                                                    
-
-
-
-
 root.mainloop()
